@@ -34,7 +34,7 @@ function ChatScreen({ chat, messages }) {
             return messageSnapshot.docs.map(message => (
                 <Message
                     key={message.id}
-                    users={message.data().user}
+                    user={message.data().user}
                     message={{
                         ...message.data(),
                         timestamp: message.data().timestamp?.toDate().getTime()
